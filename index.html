@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Real Panther Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body{
+      background:#000;
+      color:#FFD700;
+      text-align:center;
+      font-family:Arial;
+    }
+    button{
+      padding:20px 40px;
+      font-size:24px;
+      background:#FFD700;
+      border:none;
+      border-radius:12px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>🐆 REAL PANTHER 🐆</h2>
+  <p>Tap & Earn Panther Power</p>
+
+  <h1 id="power">0</h1>
+
+  <button onclick="tap()">TAP 🐾</button>
+
+  <p>Energy: <span id="energy">100</span></p>
+
+<script>
+let power = 0;
+let energy = 100;
+
+function tap(){
+  if(energy <= 0){
+    alert("Energy khatam! Baad mein aao ⚡");
+    return;
+  }
+  power++;
+  energy--;
+  document.getElementById("power").innerText = power;
+  document.getElementById("energy").innerText = energy;
+}
+</script>
+
+</body>
+</html>
